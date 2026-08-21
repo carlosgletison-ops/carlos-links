@@ -358,18 +358,31 @@ body {
 }
 
 .teaser-huge-title {
-    font-size: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: -0.05em;
+    color: var(--text-pure-black);
+    line-height: 1;
+}
+
+.highlight-huge {
+    font-size: 3.4rem;
     font-weight: 900;
     letter-spacing: -0.05em;
     color: var(--text-pure-black);
-    line-height: 1.05;
+    line-height: 0.95;
+    display: block;
 }
 
 .teaser-huge-title em {
+    font-size: 1.85rem;
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 600;
     color: var(--blue-primary);
+    line-height: 1.2;
+    display: block;
+    margin-top: 4px;
 }
 
 .teaser-desc {
@@ -443,8 +456,12 @@ body {
         font-size: 1.55rem;
     }
 
-    .teaser-huge-title {
-        font-size: 2.35rem;
+    .highlight-huge {
+        font-size: 2.75rem;
+    }
+
+    .teaser-huge-title em {
+        font-size: 1.5rem;
     }
 
     .link-row {
