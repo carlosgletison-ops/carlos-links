@@ -1,35 +1,35 @@
 /* ==========================================================================
-   CARLOS GLETISON — EDITORIAL WHITE, BLACK & BLUE DESIGN SYSTEM
+   CARLOS GLETISON — LUXURY EDITORIAL LINKS & SHOWCASE
    Theme: Pure White Canvas + Deep Black Typography + Electric Blue Accents
    ========================================================================== */
 
 :root {
     /* Color Palette */
     --bg-white: #FFFFFF;
-    --bg-card: #FAFAFB;
-    --bg-card-hover: #F1F5F9;
-    --border-light: #E4E4E7;
-    --border-dark: #18181B;
+    --bg-surface: #F8FAFC;
+    --bg-surface-hover: #F1F5F9;
+    --border-subtle: #E2E8F0;
+    --border-dark: #09090B;
 
     /* Blue Accents */
     --blue-primary: #0052FF;
     --blue-hover: #0040D6;
-    --blue-subtle: #EEF4FF;
-    --blue-border: rgba(0, 82, 255, 0.2);
+    --blue-light: #EEF4FF;
+    --blue-border: rgba(0, 82, 255, 0.25);
 
-    /* Text Colors */
-    --text-black: #09090B;
-    --text-slate: #52525B;
-    --text-muted: #71717A;
+    /* Text */
+    --text-pure-black: #09090B;
+    --text-slate: #475569;
+    --text-muted: #64748B;
 
     /* Radii */
     --radius-full: 9999px;
-    --radius-2xl: 24px;
-    --radius-xl: 18px;
-    --radius-lg: 14px;
+    --radius-2xl: 22px;
+    --radius-xl: 16px;
+    --radius-lg: 12px;
 
     /* Smooth Motion */
-    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -46,8 +46,8 @@ html {
 body {
     min-height: 100vh;
     background-color: var(--bg-white);
-    color: var(--text-black);
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-pure-black);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -57,7 +57,7 @@ body {
 }
 
 /* ==========================================================================
-   INTRO REVEAL ANIMATION (Blue screen with expanding white ball)
+   INTRO REVEAL ANIMATION (Blue screen with expanding white circle)
    ========================================================================== */
 .intro-screen {
     position: fixed;
@@ -84,7 +84,7 @@ body {
     background-color: #FFFFFF;
     border-radius: 50%;
     transform: scale(0);
-    animation: expandCircle 1.25s var(--ease-out-expo) 0.2s forwards;
+    animation: expandCircle 1.25s var(--ease-out) 0.2s forwards;
 }
 
 @keyframes expandCircle {
@@ -103,17 +103,17 @@ body {
 }
 
 /* ==========================================================================
-   PAGE CONTAINER & ENTRANCE ANIMATION
+   PAGE CONTAINER & REVEAL
    ========================================================================== */
 .page-container {
     width: 100%;
-    max-width: 460px;
+    max-width: 440px;
     display: flex;
     flex-direction: column;
-    gap: 1.65rem;
+    gap: 1.85rem;
     opacity: 0;
     transform: translateY(20px);
-    animation: pageReveal 0.8s var(--ease-out-expo) 0.85s forwards;
+    animation: pageReveal 0.8s var(--ease-out) 0.85s forwards;
 }
 
 @keyframes pageReveal {
@@ -138,20 +138,19 @@ body {
 }
 
 .photo-frame {
-    width: 110px;
-    height: 110px;
+    width: 104px;
+    height: 104px;
     border-radius: 50%;
     overflow: hidden;
-    background: #F4F4F5;
+    background: #F1F5F9;
     border: 3px solid #FFFFFF;
-    box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.18), 0 0 0 1.5px var(--border-light);
-    margin-bottom: 1.25rem;
-    transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s ease;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 0 0 1px var(--border-subtle);
+    margin-bottom: 1.15rem;
+    transition: transform 0.35s var(--ease-out);
 }
 
 .photo-frame:hover {
-    transform: scale(1.05);
-    box-shadow: 0 16px 36px -8px rgba(0, 82, 255, 0.25), 0 0 0 2px var(--blue-primary);
+    transform: scale(1.04);
 }
 
 .photo-img {
@@ -161,283 +160,338 @@ body {
     object-position: center 20%;
 }
 
-.title-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    margin-bottom: 0.85rem;
-}
-
-.brand-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.85rem;
+.brand-name {
+    font-size: 1.65rem;
     font-weight: 800;
     letter-spacing: -0.04em;
-    color: var(--text-black);
+    color: var(--text-pure-black);
+    margin-bottom: 4px;
 }
 
-.handle-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--blue-subtle);
-    border: 1px solid var(--blue-border);
-    padding: 3px 10px;
-    border-radius: var(--radius-full);
-}
-
-.handle-text {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--blue-primary);
+.brand-role {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-muted);
     letter-spacing: -0.01em;
 }
 
-.blue-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: var(--blue-primary);
-}
-
-.intro-text {
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: var(--text-slate);
-    max-width: 92%;
-    font-weight: 400;
-}
-
-.tera-tag {
-    color: var(--text-black);
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--text-black);
-    transition: all 0.2s ease;
-}
-
-.tera-tag:hover {
-    color: var(--blue-primary);
-    border-color: var(--blue-primary);
-}
-
 /* ==========================================================================
-   QUICK ACTIONS & SOCIALS
+   LINKS STACK
    ========================================================================== */
-.quick-links {
+.links-stack {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
 
-/* Primary WhatsApp CTA Button */
-.btn-primary {
+.link-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.15rem 1.4rem;
-    background-color: var(--text-black);
-    color: #FFFFFF;
+    padding: 0.95rem 1.15rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-xl);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 0.98rem;
-    letter-spacing: -0.01em;
-    box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s var(--ease-out-expo);
-    border: 1px solid var(--text-black);
+    color: var(--text-pure-black);
+    transition: all 0.25s var(--ease-out);
 }
 
-.btn-primary i:first-child {
-    font-size: 1.35rem;
-    color: #25D366;
-    margin-right: 0.75rem;
+.link-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    background: #FFFFFF;
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-right: 0.95rem;
+    color: var(--text-pure-black);
+    transition: all 0.25s ease;
+    flex-shrink: 0;
 }
 
-.btn-primary span {
+.link-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
     text-align: left;
 }
 
-.arrow-icon {
+.link-label {
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text-pure-black);
+}
+
+.link-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.row-arrow {
     font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-muted);
     transition: transform 0.25s ease, color 0.25s ease;
 }
 
-.btn-primary:hover {
-    background-color: var(--blue-primary);
-    border-color: var(--blue-primary);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px -4px rgba(0, 82, 255, 0.35);
-}
-
-.btn-primary:hover .arrow-icon {
-    transform: translateX(4px);
-    color: #FFFFFF;
-}
-
-/* Social Grid Pills */
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-}
-
-.social-pill {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 10px 8px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--text-black);
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: all 0.25s var(--ease-out-expo);
-}
-
-.social-pill i {
-    font-size: 1.05rem;
-    color: var(--text-slate);
-    transition: color 0.2s ease;
-}
-
-.social-pill:hover {
-    background: #FFFFFF;
-    border-color: var(--blue-primary);
-    color: var(--blue-primary);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px -4px rgba(0, 82, 255, 0.15);
-}
-
-.social-pill:hover i {
-    color: var(--blue-primary);
-}
-
-/* ==========================================================================
-   FEATURED SERVICE SHOWCASE CARDS (Sites & Vídeo)
-   ========================================================================== */
-.service-card {
+.link-row:hover {
     background-color: #FFFFFF;
-    border: 1.5px solid var(--border-light);
-    border-radius: var(--radius-2xl);
-    padding: 1.5rem 1.5rem 1.35rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-    transition: all 0.35s var(--ease-out-expo);
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card:hover {
     border-color: var(--blue-primary);
-    box-shadow: 0 16px 36px -8px rgba(0, 82, 255, 0.12), 0 0 0 1px var(--blue-primary);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px -4px rgba(0, 82, 255, 0.12);
 }
 
-.service-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.service-icon-box {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-}
-
-.icon-blue {
-    background: var(--blue-subtle);
+.link-row:hover .row-arrow {
+    transform: translateX(4px);
     color: var(--blue-primary);
-    border: 1px solid var(--blue-border);
 }
 
-.icon-dark {
-    background: #18181B;
-    color: #FFFFFF;
-}
-
-.service-badge {
-    font-size: 0.72rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    background: #F4F4F5;
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-}
-
-.service-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 1.22rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--text-black);
-}
-
-.service-description {
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: var(--text-slate);
-}
-
-/* Service CTA link */
-.service-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0.4rem;
-    padding: 10px 14px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-light);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: var(--text-black);
-    font-weight: 700;
-    font-size: 0.85rem;
-    transition: all 0.25s ease;
-}
-
-.service-cta i {
-    font-size: 1.1rem;
-    color: var(--blue-primary);
-    transition: transform 0.2s ease;
-}
-
-.service-cta:hover {
+.link-row:hover .link-icon-box {
     background: var(--blue-primary);
     border-color: var(--blue-primary);
     color: #FFFFFF;
 }
 
-.service-cta:hover i {
+/* WhatsApp Highlight */
+.link-whatsapp {
+    background: #09090B;
+    border-color: #09090B;
     color: #FFFFFF;
+}
+
+.link-whatsapp .link-label {
+    color: #FFFFFF;
+}
+
+.link-whatsapp .link-sub {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.link-whatsapp .link-icon-box {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #25D366;
+}
+
+.link-whatsapp .row-arrow {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.link-whatsapp:hover {
+    background: var(--blue-primary);
+    border-color: var(--blue-primary);
+    box-shadow: 0 12px 30px -4px rgba(0, 82, 255, 0.35);
+}
+
+.link-whatsapp:hover .link-icon-box {
+    background: #FFFFFF;
+    color: var(--blue-primary);
+}
+
+.link-whatsapp:hover .row-arrow {
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   SHOWCASE CARDS (Luxury editorial mockup inspired by Image 3)
+   ========================================================================== */
+.showcase-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--border-subtle);
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+    transition: all 0.35s var(--ease-out);
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-card:hover {
+    border-color: var(--blue-primary);
+    box-shadow: 0 18px 40px -8px rgba(0, 82, 255, 0.15);
+    transform: translateY(-4px);
+}
+
+/* Mockup Visual Image Frame */
+.mockup-frame {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    background: #09090B;
+}
+
+.mockup-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out);
+}
+
+.showcase-card:hover .mockup-img {
+    transform: scale(1.05);
+}
+
+.mockup-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(9, 9, 11, 0.3) 0%, rgba(9, 9, 11, 0.75) 100%);
+}
+
+.mockup-tags {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    gap: 6px;
+    z-index: 2;
+}
+
+.m-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.02em;
+}
+
+.m-tag.tag-white {
+    background: #FFFFFF;
+    color: #09090B;
+    border: none;
+}
+
+.mockup-center-badge {
+    position: absolute;
+    bottom: 14px;
+    left: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    color: var(--blue-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+/* Showcase Body */
+.showcase-body {
+    padding: 1.4rem 1.4rem 1.35rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.section-kicker {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--blue-primary);
+}
+
+.showcase-title {
+    font-size: 1.18rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.35;
+    color: var(--text-pure-black);
+}
+
+.showcase-title em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.showcase-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-slate);
+}
+
+/* Feature Pills */
+.feature-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0.2rem 0;
+}
+
+.feature-pills span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-slate);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    padding: 3px 8px;
+    border-radius: var(--radius-md);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.feature-pills span i {
+    color: var(--blue-primary);
+    font-size: 0.8rem;
+}
+
+/* CTA Button */
+.btn-showcase {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 16px;
+    background: #09090B;
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 0.86rem;
+    letter-spacing: -0.01em;
+    transition: all 0.25s var(--ease-out);
+    margin-top: 0.25rem;
+}
+
+.btn-showcase i {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: transform 0.2s ease;
+}
+
+.btn-showcase:hover {
+    background: var(--blue-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(0, 82, 255, 0.35);
+}
+
+.btn-showcase:hover i {
     transform: translate(2px, -2px);
+    color: #FFFFFF;
 }
 
 /* ==========================================================================
    FOOTER
    ========================================================================== */
-.page-footer {
+.footer {
     text-align: center;
     padding-top: 0.5rem;
 }
 
-.page-footer p {
-    font-size: 0.78rem;
+.footer p {
+    font-size: 0.76rem;
     color: var(--text-muted);
     font-weight: 500;
 }
@@ -450,16 +504,15 @@ body {
         padding: 2.25rem 1rem 3.5rem 1rem;
     }
 
-    .brand-title {
-        font-size: 1.65rem;
+    .brand-name {
+        font-size: 1.5rem;
     }
 
-    .service-card {
-        padding: 1.35rem 1.25rem;
+    .mockup-frame {
+        height: 160px;
     }
 
-    .social-pill {
-        font-size: 0.75rem;
-        padding: 9px 6px;
+    .showcase-body {
+        padding: 1.25rem 1.15rem;
     }
 }
