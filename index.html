@@ -4,211 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Gletison | Web Designer & Editor de Vídeo</title>
+    <title>Carlos Gletison • @carlos_n0110</title>
     
-    <!-- Meta SEO & Social Sharing -->
-    <meta name="description" content="Carlos Gletison - Web Designer & Editor de Vídeo na Tera Escritório. Conecte-se comigo e transforme seus projetos digitais.">
-    <meta name="keywords" content="Carlos Gletison, Web Designer, Editor de Vídeo, Tera Escritório, Tráfego Pago, Design Digital, Front-End">
-    <meta name="author" content="Carlos Gletison">
-    
-    <!-- Open Graph / WhatsApp Preview -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Carlos Gletison | Web Designer & Editor de Vídeo">
-    <meta property="og:description" content="Especialista em Web Design de alto impacto e Edição de Vídeo dinâmica. Conecte-se comigo!">
-    <meta property="og:image" content="avatar.png">
-
-    <!-- Favicon -->
+    <meta name="description" content="Carlos Gletison — Web Designer & Editor de Vídeo @teraescritorio.">
     <link rel="icon" type="image/png" href="avatar.png">
 
-    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-    <!-- CSS Stylesheet -->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Animated Ambient Glow Blobs -->
-    <div class="glow-blob blob-1" aria-hidden="true"></div>
-    <div class="glow-blob blob-2" aria-hidden="true"></div>
-    <div class="glow-blob blob-3" aria-hidden="true"></div>
+    <!-- Subtle Background Ambient Light -->
+    <div class="ambient-glow" aria-hidden="true"></div>
 
-    <!-- Interactive Canvas Particles -->
-    <canvas id="particles-canvas" class="particles-bg"></canvas>
-
-    <!-- Grid Texture Overlay -->
-    <div class="bg-grid-texture" aria-hidden="true"></div>
-
-    <!-- Top Action Bar -->
-    <header class="top-nav">
-        <div class="status-pill">
-            <span class="status-dot"></span>
-            <span class="status-text">Disponível para projetos</span>
+    <main class="wrapper">
+        <!-- Top Actions -->
+        <div class="top-bar">
+            <div class="status-indicator">
+                <span class="dot"></span>
+                <span>Disponível</span>
+            </div>
+            <button id="share-btn" class="btn-share" title="Compartilhar" aria-label="Compartilhar">
+                <i class="ri-share-forward-line"></i>
+            </button>
         </div>
-        <button id="share-btn" class="icon-btn" aria-label="Compartilhar Perfil" title="Compartilhar Perfil">
-            <i class="ri-share-forward-line"></i>
-        </button>
-    </header>
 
-    <!-- Main Links Container -->
-    <main class="container">
-        <!-- Profile Card Header -->
-        <header class="profile-header">
-            <div class="avatar-wrapper">
-                <div class="avatar-ring"></div>
-                <div class="avatar-container">
-                    <img src="avatar.png" alt="Carlos Gletison" class="avatar-img" />
-                </div>
-                <div class="verified-badge" title="Verificado">
-                    <i class="ri-checkbox-circle-fill"></i>
-                </div>
+        <!-- Profile Header -->
+        <header class="profile">
+            <div class="avatar-box">
+                <img src="avatar.png" alt="Carlos Gletison" class="avatar-img">
             </div>
 
-            <h1 class="profile-name">
-                Carlos Gletison
-            </h1>
-            <span class="profile-handle">@carlos_n0110</span>
+            <h1 class="name">Carlos Gletison</h1>
+            <p class="handle">@carlos_n0110</p>
 
-            <div class="role-tags">
-                <span class="tag tag-blue"><i class="ri-layout-masonry-line"></i> Web Designer</span>
-                <span class="tag tag-cyan"><i class="ri-film-line"></i> Editor de Vídeo</span>
-                <a href="https://www.instagram.com/teraescritorio/" target="_blank" rel="noopener noreferrer" class="tag tag-tera">
-                    <i class="ri-building-line"></i> @teraescritorio
+            <div class="bio">
+                <p class="bio-line">Web Designer &bull; Editor de Vídeo <a href="https://www.instagram.com/teraescritorio/" target="_blank" rel="noopener noreferrer" class="tera-link">@teraescritorio</a></p>
+                <p class="bio-sub">✝️ Adventista por fé &bull; 🎼 <em>“Os acordes mais bonitos tocam à alma…”</em></p>
+            </div>
+
+            <!-- Quick Instagram Direct Icon -->
+            <div class="quick-social">
+                <a href="https://www.instagram.com/carlos_n0110/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+                    <i class="ri-instagram-line"></i>
                 </a>
             </div>
-
-            <p class="profile-bio">
-                Criando experiências visuais modernas, interfaces de alto padrão e edições que prendem a atenção.
-            </p>
         </header>
 
-        <!-- Main Action Links -->
-        <section class="links-group">
-            <!-- 1. Primary CTA: WhatsApp (Electric Blue Glow Pulse) -->
-            <a href="https://wa.me/558899367945?text=Ol%C3%A1%20Carlos!%20Vim%20pelo%20seu%20link%20de%20contato%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." 
-               class="link-card card-primary" target="_blank" rel="noopener noreferrer">
-                <div class="card-glow-layer"></div>
-                <div class="card-icon-box pulse-icon">
+        <!-- Links Section -->
+        <section class="links">
+            <!-- WhatsApp -->
+            <a href="https://wa.me/558899367945?text=Ol%C3%A1%20Carlos!%20Vim%20pelo%20seu%20link%20de%20contato." 
+               class="link-pill link-featured" target="_blank" rel="noopener noreferrer">
+                <div class="pill-thumb">
+                    <img src="avatar.png" alt="Carlos" class="thumb-img">
+                </div>
+                <span class="pill-title">Falar no WhatsApp</span>
+                <div class="pill-icon">
                     <i class="ri-whatsapp-line"></i>
                 </div>
-                <div class="card-content">
-                    <div class="card-title">Falar no WhatsApp</div>
-                    <div class="card-subtitle">Atendimento direto para orçamentos e dúvidas</div>
-                </div>
-                <div class="card-action-icon">
-                    <i class="ri-arrow-right-up-line"></i>
-                </div>
             </a>
 
-            <!-- 2. Instagram Profile -->
+            <!-- Instagram -->
             <a href="https://www.instagram.com/carlos_n0110/" 
-               class="link-card card-glass" target="_blank" rel="noopener noreferrer">
-                <div class="card-icon-box icon-instagram">
+               class="link-pill" target="_blank" rel="noopener noreferrer">
+                <div class="pill-thumb">
+                    <img src="avatar.png" alt="Carlos" class="thumb-img">
+                </div>
+                <span class="pill-title">Instagram (@carlos_n0110)</span>
+                <div class="pill-icon">
                     <i class="ri-instagram-line"></i>
                 </div>
-                <div class="card-content">
-                    <div class="card-title">Instagram Pessoal</div>
-                    <div class="card-subtitle">@carlos_n0110 • Bastidores e dia a dia</div>
-                </div>
-                <div class="card-action-icon">
-                    <i class="ri-arrow-right-up-line"></i>
-                </div>
             </a>
 
-            <!-- 3. Tera Escritório -->
+            <!-- Tera Escritório -->
             <a href="https://tera-marketing.vercel.app/" 
-               class="link-card card-glass" target="_blank" rel="noopener noreferrer">
-                <div class="card-icon-box icon-tera">
-                    <i class="ri-building-4-line"></i>
+               class="link-pill" target="_blank" rel="noopener noreferrer">
+                <div class="pill-thumb icon-thumb">
+                    <i class="ri-building-line"></i>
                 </div>
-                <div class="card-content">
-                    <div class="card-title">Tera Escritório</div>
-                    <div class="card-subtitle">Assessoria & Inteligência em Marketing</div>
-                </div>
-                <div class="card-action-icon">
-                    <i class="ri-arrow-right-up-line"></i>
+                <span class="pill-title">Tera Escritório (Site Oficial)</span>
+                <div class="pill-icon">
+                    <i class="ri-global-line"></i>
                 </div>
             </a>
 
-            <!-- 4. Instagram Tera Escritório -->
+            <!-- Instagram Tera -->
             <a href="https://www.instagram.com/teraescritorio/" 
-               class="link-card card-glass" target="_blank" rel="noopener noreferrer">
-                <div class="card-icon-box icon-tera-insta">
+               class="link-pill" target="_blank" rel="noopener noreferrer">
+                <div class="pill-thumb icon-thumb">
                     <i class="ri-sparkling-fill"></i>
                 </div>
-                <div class="card-content">
-                    <div class="card-title">Instagram @teraescritorio</div>
-                    <div class="card-subtitle">Conheça nossos cases e publicações</div>
-                </div>
-                <div class="card-action-icon">
-                    <i class="ri-arrow-right-up-line"></i>
+                <span class="pill-title">Instagram @teraescritorio</span>
+                <div class="pill-icon">
+                    <i class="ri-instagram-line"></i>
                 </div>
             </a>
 
-            <!-- 5. Copiar Chave Pix / Apoio ou E-mail -->
-            <button id="copy-email-btn" class="link-card card-glass btn-card" data-email="carlos.design.video@gmail.com">
-                <div class="card-icon-box icon-mail">
-                    <i class="ri-mail-send-line"></i>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/tera-escritório-3186523b5/" 
+               class="link-pill" target="_blank" rel="noopener noreferrer">
+                <div class="pill-thumb icon-thumb">
+                    <i class="ri-linkedin-fill"></i>
                 </div>
-                <div class="card-content">
-                    <div class="card-title">Contato por E-mail</div>
-                    <div class="card-subtitle">Clique para copiar o endereço de e-mail</div>
+                <span class="pill-title">Conectar no LinkedIn</span>
+                <div class="pill-icon">
+                    <i class="ri-external-link-line"></i>
                 </div>
-                <div class="card-action-icon">
-                    <i class="ri-file-copy-line"></i>
-                </div>
-            </button>
+            </a>
         </section>
-
-        <!-- Inspiring Quote / Faith & Music Section -->
-        <section class="quote-card">
-            <div class="quote-music-header">
-                <div class="music-bars" title="Tocando agora">
-                    <span></span><span></span><span></span><span></span>
-                </div>
-                <span class="music-tag">Reflexão & Fé</span>
-            </div>
-            <p class="quote-text">“Os acordes mais bonitos tocam à alma…”</p>
-            <div class="quote-footer">
-                <span>✝️ Adventista por fé</span>
-                <span>🎼 Harmonia & Propósito</span>
-            </div>
-        </section>
-
-        <!-- Social Quick Floating Icons -->
-        <div class="social-row">
-            <a href="https://wa.me/558899367945" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="WhatsApp">
-                <i class="ri-whatsapp-line"></i>
-            </a>
-            <a href="https://www.instagram.com/carlos_n0110/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="Instagram">
-                <i class="ri-instagram-line"></i>
-            </a>
-            <a href="https://github.com/carlosgletison-ops" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="GitHub">
-                <i class="ri-github-line"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/tera-escritório-3186523b5/" target="_blank" rel="noopener noreferrer" class="social-circle-btn" title="LinkedIn">
-                <i class="ri-linkedin-box-line"></i>
-            </a>
-        </div>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2026 Carlos Gletison. Desenvolvido com excelência.</p>
+            <p>&copy; 2026 Carlos Gletison</p>
         </footer>
     </main>
 
-    <!-- Toast Notification for Copy -->
+    <!-- Toast Notification -->
     <div id="toast" class="toast">
-        <i class="ri-checkbox-circle-fill"></i>
-        <span id="toast-message">Copiado para a área de transferência!</span>
+        <i class="ri-check-line"></i>
+        <span id="toast-text">Link copiado!</span>
     </div>
 
-    <!-- JavaScript Interactions -->
     <script src="script.js"></script>
 </body>
 
