@@ -298,126 +298,78 @@ body {
 }
 
 /* ==========================================================================
-   COMING SOON TEASER CARD (@cr.dsgn_)
+   FREE EDITORIAL TEASER SECTION (@cr.dsgn_)
    ========================================================================== */
-.coming-soon-card {
-    background: #FFFFFF;
-    border: 1.5px solid var(--border-subtle);
-    border-radius: var(--radius-2xl);
-    padding: 1.5rem 1.4rem;
+.teaser-section {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
-    transition: all 0.35s var(--ease-out);
-    position: relative;
-    overflow: hidden;
+    gap: 0.9rem;
+    padding-top: 0.5rem;
+    text-align: left;
 }
 
-.coming-soon-card:hover {
-    border-color: var(--blue-primary);
-    box-shadow: 0 16px 36px -6px rgba(0, 82, 255, 0.15);
-    transform: translateY(-3px);
-}
-
-.coming-soon-header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.badge-soon {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--blue-light);
-    color: var(--blue-primary);
-    border: 1px solid var(--blue-border);
-    padding: 4px 10px;
-    border-radius: var(--radius-full);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-}
-
-.pulse-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--blue-primary);
-    box-shadow: 0 0 8px var(--blue-primary);
-    animation: pulseGlow 1.8s infinite ease-out;
-}
-
-@keyframes pulseGlow {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.5); opacity: 0.5; }
-    100% { transform: scale(1); opacity: 1; }
-}
-
-.coming-soon-title {
-    font-size: 1.25rem;
+.teaser-huge-title {
+    font-size: 2.2rem;
     font-weight: 800;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     color: var(--text-pure-black);
-    line-height: 1.35;
+    line-height: 1.15;
 }
 
-.coming-soon-title em {
+.teaser-huge-title em {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 600;
     color: var(--blue-primary);
 }
 
-.coming-soon-desc {
-    font-size: 0.86rem;
+.teaser-desc {
+    font-size: 0.92rem;
     line-height: 1.6;
     color: var(--text-slate);
 }
 
-/* Button Coming Soon */
-.btn-coming-soon {
+/* Button Teaser */
+.btn-teaser {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.95rem 1.15rem;
+    padding: 1.05rem 1.35rem;
     background: #09090B;
     border-radius: var(--radius-xl);
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     letter-spacing: -0.01em;
     transition: all 0.25s var(--ease-out);
-    margin-top: 0.25rem;
+    margin-top: 0.35rem;
 }
 
-.btn-coming-soon i:first-child {
-    font-size: 1.2rem;
+.btn-teaser i:first-child {
+    font-size: 1.25rem;
     color: #FFFFFF;
-    margin-right: 0.6rem;
+    margin-right: 0.75rem;
 }
 
-.btn-coming-soon span {
+.btn-teaser span {
     flex: 1;
     text-align: left;
 }
 
-.btn-coming-soon i:last-child {
-    font-size: 1.1rem;
+.btn-teaser i:last-child {
+    font-size: 1.15rem;
     color: rgba(255, 255, 255, 0.7);
     transition: transform 0.2s ease;
 }
 
-.btn-coming-soon:hover {
+.btn-teaser:hover {
     background: var(--blue-primary);
     transform: translateY(-2px);
     box-shadow: 0 10px 24px -4px rgba(0, 82, 255, 0.35);
 }
 
-.btn-coming-soon:hover i:last-child {
+.btn-teaser:hover i:last-child {
     transform: translate(2px, -2px);
     color: #FFFFFF;
 }
