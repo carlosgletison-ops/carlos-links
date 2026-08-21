@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Gletison • @carlos_n0110</title>
+    <title>Carlos Gletison — Web Design & Edição de Vídeo</title>
     
-    <meta name="description" content="Carlos Gletison — Web Designer & Editor de Vídeo @teraescritorio.">
-    <link rel="icon" type="image/png" href="avatar.png">
+    <meta name="description" content="Carlos Gletison — Especialista em Web Design exclusivo e Edição de Vídeo de alta retenção. @teraescritorio.">
+    <link rel="icon" type="image/jpeg" href="carlos.jpg">
 
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Plus Jakarta Sans & Syne -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 
     <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -22,117 +22,103 @@
 </head>
 
 <body>
-    <!-- Subtle Background Ambient Light -->
-    <div class="ambient-glow" aria-hidden="true"></div>
+    <!-- INTRO REVEAL ANIMATION (Blue screen with expanding white circle) -->
+    <div id="intro-screen" class="intro-screen" aria-hidden="true">
+        <div class="intro-circle"></div>
+    </div>
 
-    <main class="wrapper">
-        <!-- Top Actions -->
-        <div class="top-bar">
-            <div class="status-indicator">
-                <span class="dot"></span>
-                <span>Disponível</span>
-            </div>
-            <button id="share-btn" class="btn-share" title="Compartilhar" aria-label="Compartilhar">
-                <i class="ri-share-forward-line"></i>
-            </button>
-        </div>
-
-        <!-- Profile Header -->
-        <header class="profile">
-            <div class="avatar-box">
-                <img src="avatar.png" alt="Carlos Gletison" class="avatar-img">
+    <main class="page-container">
+        <!-- Profile Header Section -->
+        <header class="profile-header">
+            <div class="photo-frame">
+                <img src="carlos.jpg" alt="Carlos Gletison" class="photo-img">
             </div>
 
-            <h1 class="name">Carlos Gletison</h1>
-            <p class="handle">@carlos_n0110</p>
-
-            <div class="bio">
-                <p class="bio-line">Web Designer &bull; Editor de Vídeo <a href="https://www.instagram.com/teraescritorio/" target="_blank" rel="noopener noreferrer" class="tera-link">@teraescritorio</a></p>
-                <p class="bio-sub">✝️ Adventista por fé &bull; 🎼 <em>“Os acordes mais bonitos tocam à alma…”</em></p>
+            <div class="title-group">
+                <h1 class="brand-title">Carlos Gletison</h1>
+                <div class="handle-badge">
+                    <span class="handle-text">@carlos_n0110</span>
+                    <span class="blue-dot"></span>
+                </div>
             </div>
 
-            <!-- Quick Instagram Direct Icon -->
-            <div class="quick-social">
-                <a href="https://www.instagram.com/carlos_n0110/" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
-                    <i class="ri-instagram-line"></i>
-                </a>
-            </div>
+            <p class="intro-text">
+                Web Designer & Editor de Vídeo na <a href="https://www.instagram.com/teraescritorio/" target="_blank" rel="noopener noreferrer" class="tera-tag">@teraescritorio</a>. Criando projetos visuais de alto impacto e narrativas dinâmicas.
+            </p>
         </header>
 
-        <!-- Links Section -->
-        <section class="links">
-            <!-- WhatsApp -->
+        <!-- Primary Quick Actions -->
+        <section class="quick-links">
             <a href="https://wa.me/558899367945?text=Ol%C3%A1%20Carlos!%20Vim%20pelo%20seu%20link%20de%20contato." 
-               class="link-pill link-featured" target="_blank" rel="noopener noreferrer">
-                <div class="pill-thumb">
-                    <img src="avatar.png" alt="Carlos" class="thumb-img">
-                </div>
-                <span class="pill-title">Falar no WhatsApp</span>
-                <div class="pill-icon">
-                    <i class="ri-whatsapp-line"></i>
-                </div>
+               class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <i class="ri-whatsapp-line"></i>
+                <span>Iniciar Conversa no WhatsApp</span>
+                <i class="ri-arrow-right-line arrow-icon"></i>
             </a>
 
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/carlos_n0110/" 
-               class="link-pill" target="_blank" rel="noopener noreferrer">
-                <div class="pill-thumb">
-                    <img src="avatar.png" alt="Carlos" class="thumb-img">
-                </div>
-                <span class="pill-title">Instagram (@carlos_n0110)</span>
-                <div class="pill-icon">
+            <div class="social-grid">
+                <a href="https://www.instagram.com/carlos_n0110/" target="_blank" rel="noopener noreferrer" class="social-pill">
                     <i class="ri-instagram-line"></i>
-                </div>
-            </a>
-
-            <!-- Tera Escritório -->
-            <a href="https://tera-marketing.vercel.app/" 
-               class="link-pill" target="_blank" rel="noopener noreferrer">
-                <div class="pill-thumb icon-thumb">
+                    <span>Instagram</span>
+                </a>
+                <a href="https://tera-marketing.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-pill">
                     <i class="ri-building-line"></i>
-                </div>
-                <span class="pill-title">Tera Escritório (Site Oficial)</span>
-                <div class="pill-icon">
-                    <i class="ri-global-line"></i>
-                </div>
-            </a>
+                    <span>Tera Escritório</span>
+                </a>
+                <a href="https://www.instagram.com/teraescritorio/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                    <i class="ri-sparkling-line"></i>
+                    <span>@teraescritorio</span>
+                </a>
+            </div>
+        </section>
 
-            <!-- Instagram Tera -->
-            <a href="https://www.instagram.com/teraescritorio/" 
-               class="link-pill" target="_blank" rel="noopener noreferrer">
-                <div class="pill-thumb icon-thumb">
-                    <i class="ri-sparkling-fill"></i>
+        <!-- Service Showcase Section 1: SITES & WEB DESIGN -->
+        <section class="service-card">
+            <div class="service-top">
+                <div class="service-icon-box icon-blue">
+                    <i class="ri-layout-masonry-line"></i>
                 </div>
-                <span class="pill-title">Instagram @teraescritorio</span>
-                <div class="pill-icon">
-                    <i class="ri-instagram-line"></i>
-                </div>
-            </a>
+                <div class="service-badge">Web Design</div>
+            </div>
+            
+            <h2 class="service-title">Criação de Sites & Landing Pages</h2>
+            <p class="service-description">
+                Interfaces exclusivas, responsivas e pensadas para converter. Estrutura moderna, estética minimalista e performance impecável para elevar a percepção da sua marca.
+            </p>
 
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/in/tera-escritório-3186523b5/" 
-               class="link-pill" target="_blank" rel="noopener noreferrer">
-                <div class="pill-thumb icon-thumb">
-                    <i class="ri-linkedin-fill"></i>
+            <a href="https://wa.me/558899367945?text=Ol%C3%A1%20Carlos!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20cria%C3%A7%C3%A3o%20de%20site%20%2F%20landing%20page." 
+               class="service-cta" target="_blank" rel="noopener noreferrer">
+                <span>Solicitar Orçamento de Site</span>
+                <i class="ri-arrow-right-up-line"></i>
+            </a>
+        </section>
+
+        <!-- Service Showcase Section 2: EDIÇÃO DE VÍDEO -->
+        <section class="service-card">
+            <div class="service-top">
+                <div class="service-icon-box icon-dark">
+                    <i class="ri-film-line"></i>
                 </div>
-                <span class="pill-title">Conectar no LinkedIn</span>
-                <div class="pill-icon">
-                    <i class="ri-external-link-line"></i>
-                </div>
+                <div class="service-badge">Vídeo & Motion</div>
+            </div>
+            
+            <h2 class="service-title">Edição de Vídeo de Alta Retenção</h2>
+            <p class="service-description">
+                Reels, criativos para anúncios, VSLs e vídeos institucionais. Edições dinâmicas, cortes precisos, sound design refinado e storytelling focado em prender a atenção até o final.
+            </p>
+
+            <a href="https://wa.me/558899367945?text=Ol%C3%A1%20Carlos!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20edi%C3%A7%C3%A3o%20de%20v%C3%ADdeo." 
+               class="service-cta" target="_blank" rel="noopener noreferrer">
+                <span>Solicitar Orçamento de Vídeo</span>
+                <i class="ri-arrow-right-up-line"></i>
             </a>
         </section>
 
         <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2026 Carlos Gletison</p>
+        <footer class="page-footer">
+            <p>&copy; 2026 Carlos Gletison &bull; Web Design & Edição</p>
         </footer>
     </main>
-
-    <!-- Toast Notification -->
-    <div id="toast" class="toast">
-        <i class="ri-check-line"></i>
-        <span id="toast-text">Link copiado!</span>
-    </div>
 
     <script src="script.js"></script>
 </body>
