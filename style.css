@@ -24,8 +24,7 @@
 
     /* Radii */
     --radius-full: 9999px;
-    --radius-2xl: 22px;
-    --radius-xl: 16px;
+    --radius-xl: 18px;
     --radius-lg: 12px;
 
     /* Smooth Motion */
@@ -54,6 +53,54 @@ body {
     padding: 3rem 1.25rem;
     position: relative;
     overflow-x: hidden;
+}
+
+/* ==========================================================================
+   BACKGROUND GEOMETRIC SYMBOLS (Blue Editorial Asterisk/Crosses)
+   ========================================================================== */
+.bg-graphics {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bg-shape {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    opacity: 0.92;
+    transition: transform 0.6s ease;
+}
+
+.shape-top-right {
+    top: -50px;
+    right: -70px;
+    transform: rotate(15deg);
+}
+
+.shape-bottom-left {
+    bottom: -60px;
+    left: -70px;
+    transform: rotate(-10deg);
+}
+
+@media (max-width: 768px) {
+    .bg-shape {
+        width: 180px;
+        height: 180px;
+    }
+    .shape-top-right {
+        top: -30px;
+        right: -50px;
+    }
+    .shape-bottom-left {
+        bottom: -35px;
+        left: -50px;
+    }
 }
 
 /* ==========================================================================
@@ -111,6 +158,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.85rem;
+    position: relative;
+    z-index: 1;
     opacity: 0;
     transform: translateY(20px);
     animation: pageReveal 0.8s var(--ease-out) 0.85s forwards;
@@ -304,16 +353,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
-    padding-top: 0.5rem;
+    padding-top: 0.75rem;
     text-align: left;
 }
 
 .teaser-huge-title {
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -0.04em;
+    font-size: 2.75rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
     color: var(--text-pure-black);
-    line-height: 1.15;
+    line-height: 1.05;
 }
 
 .teaser-huge-title em {
@@ -334,22 +383,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.05rem 1.35rem;
+    padding: 1.15rem 1.4rem;
     background: #09090B;
     border-radius: var(--radius-xl);
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     letter-spacing: -0.01em;
     transition: all 0.25s var(--ease-out);
     margin-top: 0.35rem;
-}
-
-.btn-teaser i:first-child {
-    font-size: 1.25rem;
-    color: #FFFFFF;
-    margin-right: 0.75rem;
 }
 
 .btn-teaser span {
@@ -357,10 +400,10 @@ body {
     text-align: left;
 }
 
-.btn-teaser i:last-child {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.7);
-    transition: transform 0.2s ease;
+.btn-teaser i {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .btn-teaser:hover {
@@ -369,8 +412,8 @@ body {
     box-shadow: 0 10px 24px -4px rgba(0, 82, 255, 0.35);
 }
 
-.btn-teaser:hover i:last-child {
-    transform: translate(2px, -2px);
+.btn-teaser:hover i {
+    transform: translateX(4px);
     color: #FFFFFF;
 }
 
@@ -400,6 +443,10 @@ body {
         font-size: 1.55rem;
     }
 
+    .teaser-huge-title {
+        font-size: 2.35rem;
+    }
+
     .link-row {
         padding: 0.95rem 1.15rem;
     }
@@ -408,9 +455,5 @@ body {
         width: 40px;
         height: 40px;
         font-size: 1.2rem;
-    }
-
-    .coming-soon-card {
-        padding: 1.25rem 1.15rem;
     }
 }
